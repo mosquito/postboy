@@ -24,7 +24,7 @@ setup(name='postboy',
       'Environment :: Console',
       'Programming Language :: Python',
     ],
-    long_description=open('README.md').read(),
+    long_description=open('README.rst').read(),
     packages=[
       'postboy',
     ],
