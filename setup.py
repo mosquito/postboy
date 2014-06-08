@@ -17,22 +17,21 @@ Simple distributed emailing system. Consists of broker (based on pyzmq) and work
 Installation
 ++++++++++++
 
-pip install postboy
+        pip install postboy
 
 Using
 +++++
 
     /usr/bin/postboy-broker --debug
+
     /usr/bin/postboy-worker --debug
 
-    /usr/bin/env python
-    Python 2.7.6 (default, Apr  9 2014, 11:48:52)
+Then try to use it.
     >>> from postboy import Email, BrokerHandler
     >>> broker = BrokerHandler()
     >>> email = Email(sender='info@test.name', recipient='user@localhost', subject='Test')
     >>> broker.store(email.dumps())
     1 # <= return task id
-
 """
 
 setup(name='postboy',
