@@ -8,7 +8,7 @@ except ImportError:
     from distutils.core import setup
 
 
-__version__ = '0.3.1'
+__version__ = '0.3.2'
 __author__ = 'Dmitry Orlov <me@mosquito.su>'
 
 
@@ -28,7 +28,7 @@ setup(name='postboy',
     packages=[
       'postboy',
     ],
-    scripts=['bin/postboy-broker', 'bin/postboy-worker'],
+    scripts=['bin/postboy-worker',],
     install_requires=[
       'pika'
     ],
