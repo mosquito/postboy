@@ -1,18 +1,23 @@
 # encoding: utf-8
-import zmq
+import pika
 import sys
-import time
-import uuid
-import json
+from postboy import Email
 
 sys.path.append('..')
-from core import RequestHandler
+
+connection = pika.BlockingConnection(pika.ConnectionParameters('localhost'))
 
 def handler(*args):
     print args
 
-proto = RequestHandler(handler=handler)
-proto.get_task()
+channel = connection.channel()
+channel.queue_declare(queue='postboy')
 
-# for request in range (1,10):
-#     proto.store(request)
+channel.basic_publish(
+    exchange='',
+    routing_key='postboy',
+    body=Email('test@user.com', 'me@mosquito.su', "Test").dumps(),
+    properties=pika.BasicProperties(delivery_mode=2)
+)
+
+channel.close()

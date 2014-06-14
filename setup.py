@@ -8,7 +8,7 @@ except ImportError:
     from distutils.core import setup
 
 
-__version__ = '0.2.8'
+__version__ = '0.3.0'
 __author__ = 'Dmitry Orlov <me@mosquito.su>'
 
 
@@ -30,9 +30,9 @@ setup(name='postboy',
     ],
     scripts=['bin/postboy-broker', 'bin/postboy-worker'],
     install_requires=[
-        'pyzmq'
+      'pika'
     ],
     requires=[
-        'pyzmq'
+      'pika'
     ],
 )
