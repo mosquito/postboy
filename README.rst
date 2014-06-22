@@ -18,42 +18,7 @@ For delivering will be used any localhost MTA.
 Installation
 ++++++++++++
 
-Quick installation the system in the Ubuntu server.
-
-Install the Postboy:
-
-    pip install postboy
-
-Then install rabbitmq and any MTA (I recommend install postfix):
-
-    apt-get install postfix rabbitmq-server
-
-Choose local domain and other
-
-Run the worker:
-    
-    /usr/bin/postboy --debug
-
-Also you may set any options:
-
-    $ postboy --help
-    Usage: postboy [options]
-
-    Options:
-      -h, --help            show this help message and exit
-      -H ADDRESS, --host=ADDRESS
-                            Broker host
-      -p PORT, --port=PORT  Broker port
-      -t SECONDS, --timeout=SECONDS
-                            Getting task timeout
-      --smtp-host=ADDRESS   SMTP server
-      --debug               A lot of logging messages
-      --broker=HOST         Rabbitmq host
-      --broker-port=PORT    Rabbitmq port
-      --broker-channel=CHANNEL
-                            Rabbitmq channel
-      --max-retries=NUMBER  Maximum number of retries sending messages
-
+Quick installation the system in the Ubuntu server https://github.com/mosquito/postboy/wiki/Installation.
 
 Using
 +++++
