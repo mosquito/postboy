@@ -19,16 +19,16 @@ Installation
 ++++++++++++
 
 Quick installation the system in the Ubuntu server.
+
 Install the Postboy:
 
     pip install postboy
 
-Then install a rabbitmq and any MTA (I recommend install postfix):
+Then install rabbitmq and any MTA (I recommend install postfix):
 
     apt-get install postfix rabbitmq-server
 
 Choose local domain and other
-
 
 Run the worker:
     
