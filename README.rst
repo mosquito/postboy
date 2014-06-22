@@ -1,7 +1,7 @@
 PostBoy
 =======
 
-Simple distributed emailing system. Consists of broker (based on pyzmq) and worker.
+Simple distributed emailing system.
 
 Installation
 ++++++++++++
@@ -11,11 +11,10 @@ Installation
 Using
 +++++
 
-    /usr/bin/postboy-broker --debug
-
-    /usr/bin/postboy-worker --debug
+    /usr/bin/postboy --debug
 
 Then try to use it.
+
     >>> from postboy import Email, BrokerHandler
     >>> broker = BrokerHandler()
     >>> email = Email(sender='info@test.name', recipient='user@localhost', subject='Test')
